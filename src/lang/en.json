@@ -1,0 +1,7 @@
+{
+  "name": "name",
+  "nav_account": "account",
+  "nav_main": "main",
+  "nav_voucher": "voucher",
+  "user_hello": "{user}, hello!"
+}
