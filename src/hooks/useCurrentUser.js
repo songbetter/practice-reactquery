@@ -4,6 +4,8 @@ import axios from 'axios'
 const queryKey = ['current-user']
 
 export const useCurrentUser = () => {
+  const queryClient = useQueryClient()
+
   const queryFn = () =>
     axios
       .get(
@@ -11,7 +13,19 @@ export const useCurrentUser = () => {
       )
       .then((response) => response.data)
 
-  const { data } = useQuery({ queryKey, queryFn })
+  const mutationFn = (data) =>
+    axios.patch(
+      'https://react-query-f8aca-default-rtdb.firebaseio.com/current-user.json',
+      data,
+    )
 
-  return { data }
+  const { data } = useQuery({ queryKey, queryFn })
+  const mutation = useMutation({
+    mutationFn,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey })
+    },
+  })
+
+  return { data, mutation }
 }
