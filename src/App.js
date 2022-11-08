@@ -1,7 +1,9 @@
+import IntlWrapper from './lang/IntlWrapper'
+
 import './App.css'
 
 function App() {
-  return <div></div>
+  return <IntlWrapper></IntlWrapper>
 }
 
 export default App
