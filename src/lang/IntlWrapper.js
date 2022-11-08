@@ -33,3 +33,9 @@ const IntlWrapper = ({ children }) => {
 }
 
 export default IntlWrapper
+
+export const COUNTRY_LIST = [
+  { label: 'English', value: 'en' },
+  { label: '日語', value: 'jp' },
+  { label: '한국어', value: 'ko' },
+]
