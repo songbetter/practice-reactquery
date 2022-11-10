@@ -54,4 +54,8 @@ const NAV_LIST = [
     path: '/voucher',
     label: 'voucher',
   },
+  {
+    path: '/test',
+    label: 'test',
+  },
 ]

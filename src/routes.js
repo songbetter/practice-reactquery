@@ -17,6 +17,7 @@ const routes = [
     element: lazyLoadRoutes('VoucherPage'),
     errorElement: <NotFoundPage />,
   },
+  { path: 'test', element: lazyLoadRoutes('TestPage') },
 ]
 
 export default routes
