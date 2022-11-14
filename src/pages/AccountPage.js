@@ -10,11 +10,11 @@ const AccountPage = () => {
 
   return (
     <Layout>
-      <div>이름: {data.name}</div>
       <div>전화번호: {data.mobile} </div>
       <div>이메일: {data.email} </div>
       <input value={name} onChange={onChange} />
       <button
+        className="btn-primary"
         onClick={() =>
           mutation.mutate({
             name,
