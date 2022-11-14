@@ -5,6 +5,6 @@
   "nav_voucher": "voucher",
   "nav_signup": "signup",
   "user_hello": "{user}, hello!",
-  "footer_contactus:": "Contact us: {link} to chat with our customer service (10:00am ~ 18:00pm)",
+  "footer_contactus": "Contact us: {link} to chat with our customer service (10:00am ~ 18:00pm)",
   "footer_cs": "Click here"
 }

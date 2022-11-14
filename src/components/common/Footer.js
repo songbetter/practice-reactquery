@@ -21,7 +21,7 @@ export default Footer
 
 const messeges = defineMessages({
   cs: {
-    id: 'footer.cs',
+    id: 'footer_cs',
     defaultMessage: '"고객센터"',
   },
   contactus: {
