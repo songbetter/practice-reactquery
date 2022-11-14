@@ -3,5 +3,8 @@
   "nav_account": "アカウント",
   "nav_main": "主要",
   "nav_voucher": "バウチャー",
-  "user_hello": "{user}, こんにちは!"
+  "nav_signup": "会員登録",
+  "user_hello": "{user}, こんにちは!",
+  "footer_contactus:": "チャットでお問い合わせ： {link}カスタマーセンターとチャットする​（受付時間：平日10:00～18:00）​",
+  "footer_cs": "ここをクリックして "
 }
