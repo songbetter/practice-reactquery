@@ -6,7 +6,7 @@ import Korean from './ko.json'
 import Japaness from './jp.json'
 
 export const IntlContext = React.createContext()
-const local = navigator.language.split('-')[0] // 국가코드 ko-KR
+export const local = navigator.language.split('-')[0] // 국가코드 ko-KR
 
 const resoure = {
   en: English,

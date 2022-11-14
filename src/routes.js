@@ -13,8 +13,8 @@ const routes = [
     errorElement: <NotFoundPage />,
   },
   {
-    path: 'voucher',
-    element: lazyLoadRoutes('VoucherPage'),
+    path: 'signin',
+    element: lazyLoadRoutes('SignInPage'),
     errorElement: <NotFoundPage />,
   },
   { path: 'test', element: lazyLoadRoutes('TestPage') },

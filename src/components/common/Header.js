@@ -3,39 +3,39 @@ import { Link } from 'react-router-dom'
 import { FormattedMessage } from 'react-intl'
 
 import { COUNTRY_LIST, IntlContext } from '../../lang/IntlWrapper'
-import { Menu, Select } from 'antd'
-import { Header } from 'antd/lib/layout/layout'
+import { Select } from 'antd'
 
 const MyHeader = () => {
   const context = useContext(IntlContext)
   return (
-    <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-      <div className="logo" />
-      <Menu
-        theme="dark"
-        mode="horizontal"
-        defaultSelectedKeys={['main']}
-        items={NAV_LIST.map((data) => ({
-          key: data.label,
-          label: (
-            <Link to={data.path}>
-              <FormattedMessage
-                id={`nav_${data.label}`}
-                defaultMessage={data.label}
-              />
-            </Link>
-          ),
-        }))}
-      />
-      <Select
-        options={COUNTRY_LIST.map((country) => ({
-          label: country.label,
-          value: country.value,
-        }))}
-        defaultValue={context.locale}
-        onChange={context.selectLanguage}
-      />
-    </Header>
+    <header className=" z-1 w-full">
+      <div className="flex w-full">
+        <div className="p-4">logo</div>
+        <nav className="bg-blue w-full p-4">
+          <ul className="flex justify-around">
+            {NAV_LIST.map((data) => (
+              <li key={data.label}>
+                <Link to={data.path}>
+                  <FormattedMessage
+                    id={`nav_${data.label}`}
+                    defaultMessage={data.label}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <Select
+          options={COUNTRY_LIST.map((country) => ({
+            label: country.label,
+            value: country.value,
+          }))}
+          defaultValue={context.locale}
+          onChange={context.selectLanguage}
+        />
+      </div>
+    </header>
   )
 }
 
@@ -51,8 +51,8 @@ const NAV_LIST = [
     label: 'main',
   },
   {
-    path: '/voucher',
-    label: 'voucher',
+    path: '/signin',
+    label: 'signin',
   },
   {
     path: '/test',
