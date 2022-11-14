@@ -1,37 +1,15 @@
-import { Button, Layout } from 'antd'
-import { useState } from 'react'
-import { FormattedMessage } from 'react-intl'
-import MyModal from '../components/common/Modal'
+import ProductItem from '../components/product/ProductItem'
+import { useProduct } from '../hooks/useProduct'
 
 const MainPage = () => {
-  const [open, setOpen] = useState(false)
-
   return (
-    <Layout>
-      <FormattedMessage
-        id="user_hello"
-        defaultMessage="Tommy, hello!"
-        values={{ user: 'Tommy' }}
-      />
-      <Button
-        onClick={() => {
-          setOpen(true)
-        }}
-      >
-        모달 오픈
-      </Button>
-      <MyModal
-        onOk={() => {
-          setOpen(false)
-        }}
-        open={open}
-        onCancel={() => {
-          setOpen(false)
-        }}
-      >
-        내가바로 메인이다
-      </MyModal>
-    </Layout>
+    <section className="flex-col p-4">
+      <div className="text-xl font-bold">Products</div>
+      <div className="flex">
+        <ProductItem {...useProduct(1)} />
+        <ProductItem {...useProduct(2)} />
+      </div>
+    </section>
   )
 }
 
